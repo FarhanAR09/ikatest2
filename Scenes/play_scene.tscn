@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc56k02amp581"]
+
+[ext_resource type="Texture2D" uid="uid://chimn2yjaqpfh" path="res://icon.svg" id="1_b33ox"]
+[ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="2_2ym3x"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1ede1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hak54"]
+
+[node name="PlayScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-40, 155)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_1ede1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(16.73, 0.02)
+texture = ExtResource("1_b33ox")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_2ym3x")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_b33ox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+scale = Vector2(6.335, 6.335)
+shape = SubResource("CircleShape2D_hak54")
+debug_color = Color(0.97275, 0, 0.43886, 0.42)
