@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0r2s7s33w01"]
+
+[ext_resource type="PackedScene" uid="uid://baly0tudxijoh" path="res://Scenes/Objects/house.tscn" id="1_achwp"]
+[ext_resource type="Texture2D" uid="uid://5heox8e5mgbs" path="res://Assets/Visuals/Sprites/house 2.png" id="2_s3d7x"]
+
+[node name="House 2" instance=ExtResource("1_achwp")]
+houseNumber = 2
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_s3d7x")
+
+[node name="Label" parent="Sprite2D" index="0"]
+anchors_preset = 8
+offset_left = -521.5
+offset_top = -344.5
+offset_right = -481.5
+offset_bottom = -321.5
+text = "2"
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(119, -28)

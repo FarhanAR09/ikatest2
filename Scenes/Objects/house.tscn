@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://baly0tudxijoh"]
+
+[ext_resource type="Script" path="res://Scripts/Delivery/House.gd" id="1_nh2ku"]
+[ext_resource type="Texture2D" uid="uid://dv10sg2w3ip8y" path="res://Assets/Visuals/Sprites/house 1.png" id="2_w6q5q"]
+[ext_resource type="Script" path="res://Scripts/Delivery/HouseTrigger.gd" id="3_sq8l6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_13jc7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4roa"]
+
+[node name="House 1" type="Node2D"]
+position = Vector2(633, 48)
+script = ExtResource("1_nh2ku")
+houseNumber = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -509)
+texture = ExtResource("2_w6q5q")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.5
+offset_top = -333.5
+offset_right = -377.5
+offset_bottom = -310.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.44, 3.44)
+pivot_offset = Vector2(20, 12)
+size_flags_horizontal = 4
+text = "1"
+label_settings = SubResource("LabelSettings_13jc7")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("house")]
+script = ExtResource("3_sq8l6")
+house = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(230, -22)
+scale = Vector2(7.32, 7.32)
+shape = SubResource("CircleShape2D_g4roa")
+debug_color = Color(0.0770676, 0.649279, 1.92523e-07, 0.42)

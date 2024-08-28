@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DeliveryItemResource" load_steps=3 format=3 uid="uid://ctytvkfma1jo2"]
+
+[ext_resource type="Script" path="res://Scripts/Delivery/DeliveryItemResource.gd" id="1_wache"]
+[ext_resource type="Texture2D" uid="uid://bfx1pxpbjpyub" path="res://Assets/Visuals/Sprites/Foods/eggplant.png" id="2_6wwca"]
+
+[resource]
+script = ExtResource("1_wache")
+texture = ExtResource("2_6wwca")
+name = "Eggplant"

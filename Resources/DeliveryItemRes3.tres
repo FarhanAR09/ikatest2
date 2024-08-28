@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DeliveryItemResource" load_steps=3 format=3 uid="uid://cb4fqpisdyn0t"]
+
+[ext_resource type="Script" path="res://Scripts/Delivery/DeliveryItemResource.gd" id="1_n5dtn"]
+[ext_resource type="Texture2D" uid="uid://dfl1gq85bmnti" path="res://Assets/Visuals/Sprites/Foods/paprika.png" id="2_l6fbw"]
+
+[resource]
+script = ExtResource("1_n5dtn")
+texture = ExtResource("2_l6fbw")
+name = "Paprika"

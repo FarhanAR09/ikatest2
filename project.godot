@@ -11,6 +11,15 @@ config_version=5
 [application]
 
 config/name="ikatest2"
-run/main_scene="res://Scenes/play_scene.tscn"
+run/main_scene="res://Scenes/mainmenu_scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ClassChecker="*res://Scripts/Utils/ClassChecker.gd"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=1
